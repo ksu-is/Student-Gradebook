@@ -8,3 +8,6 @@ task 7 = change font colors for titles
 task 8 = have someone test code
 task 9 = add a function where student can create a "new user"
 task 10 = review code and see what needs to be added
+
+
+read the markdown guide
