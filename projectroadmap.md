@@ -8,6 +8,7 @@
 -task 8 = have someone test code
 -task 9 = add a function where student can create a "new user"
 -task 10 = review code and see what needs to be added
+-task 11 = open excel and make sure it is readable in the python shell
 
 
 read the markdown guide?
