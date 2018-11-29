@@ -5,7 +5,7 @@ from xlsxwriter.utility import xl_rowcol_to_cell
 
 class_list = open('class_list.txt','w+')
 grade_list = open('grade_list.txt','w+')
-admins = {'bigdaddysang'  : 'abc123','bexley1' : 'abc123',' ' : ' '}
+admins = {'bigdaddysang'  : 'abc321','bexley1' : 'abc123',' ' : ' '}
 
 
 
