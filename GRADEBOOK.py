@@ -42,6 +42,14 @@ def whatgrade():
             print('Course Average: ', average)
             print()
             main()
+        elif average == 69:
+            print()
+            print('nice.')
+            print()
+            print('your grade is a D')
+            print()
+            print('course average: ', average)
+            main()
         elif average >= 60:
             print('your grade is a D')
             print()
