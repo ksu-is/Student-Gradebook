@@ -2,6 +2,8 @@
 import pandas as pd
 import numpy as np
 from xlsxwriter.utility import xl_rowcol_to_cell
+import xlwt 
+from xlwt import Workbook 
 
 #text files to store user info
 class_list = open('class_list.txt','w+')
@@ -92,7 +94,7 @@ def add_class2():
     main()
 #reads excel file. .head() is usedto return the first rows in excel file 
 def excel():
-    df = pd.read_excel('GradebookDatabase.xlsx')
+    df = pd.read_excel('xlwt example.xls')
     df.head()
     print(df.head(13))
     main()
@@ -135,6 +137,26 @@ def invalid_user():
     print('Invalid user')
     login()
 
+def add_excel():
+    # Workbook is created 
+    wb = Workbook() 
+      
+    # add_sheet is used to create sheet. 
+    sheet1 = wb.add_sheet('Sheet 1') 
+      
+    sheet1.write(1, 0, 'Math') 
+    sheet1.write(2, 0, 'Science') 
+    sheet1.write(3, 0, 'PE') 
+    sheet1.write(4, 0, 'History') 
+    sheet1.write(5, 0, 'Coding') 
+    sheet1.write(0, 1, '') 
+    sheet1.write(0, 2, '') 
+    sheet1.write(0, 3, '') 
+    sheet1.write(0, 4, '') 
+    sheet1.write(0, 5, '') 
+      
+    wb.save('xlwt example.xls')
+    main()
 
 
 
@@ -161,7 +183,7 @@ def viewgrades():
 #main screen that the user sees after login 
 def main():
     print('''
-                        WELCOME TO THE STUDENT GRADE TARCKER!
+                        WELCOME TO THE GRADE TARCKER!
 
                         (1) Whats my desired grade?
                         (2) Add class scedule
@@ -169,7 +191,8 @@ def main():
                         (4) Add grades
                         (5) View entered grades
                         (6) Excel gradebook
-                        (7) EXIT
+                        (7) Add excel
+                        (8) EXIT
     ''')
 
     action = input('''
@@ -188,9 +211,10 @@ def main():
     elif action == '6':
         excel()
     elif action == '7':
+        add_excel()
+    elif action == '8':
         exitnow()
 
 login()
     
 
-        
